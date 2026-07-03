@@ -3,26 +3,34 @@ package com.pentagon.Number;
 
 public class Program32 {
 
-	public static int square(int n) {
-		int sqr=0;
-		int res=0;
-		while(n!=0) {
-			int ld=n%10;
-			sqr=ld*ld;
-			res=res+sqr;
-			n=n/10;
-		}
-		return res;
-	}
-	
+	//Logic example: 19
 	public static boolean isHappy(int n) {
-		while(n!=1 && n!=4) {
-			n=square(n);
-		}
-		return n==1;
+		int slow = n;
+		int fast = n;
+
+		do {
+			slow = getNext(slow);
+			fast = getNext(getNext(fast));
+		} while (slow != fast);
+
+		return slow == 1;
 	}
-	
+
+	private static int getNext(int n) {
+		int totalSum = 0;
+		while (n > 0) {
+			int digit = n % 10;
+			totalSum += digit * digit;
+			n /= 10;
+		}
+		return totalSum;
+	}
 	public static void main(String[] args) {
-		System.out.println(isHappy(19));
+		int number = 19; // Example number to check
+		if (isHappy(number)) {
+			System.out.println(number + " is a Happy number.");
+		} else {
+			System.out.println(number + " is an UnHappy number.");
+		}
 	}
 }

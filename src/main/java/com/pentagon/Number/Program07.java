@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Program07 {
 
 	public static int sumDigits(int n) {
-		
 		if(n==0) {
 			System.out.println("Number can not be ZERO");
 			System.exit(0);

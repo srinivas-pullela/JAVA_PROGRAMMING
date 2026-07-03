@@ -3,7 +3,29 @@ package com.pentagon.Number;
 
 public class Program28 {
 	
+	public static boolean isHappyNumber(int n) {
+		int slow = n;
+		int fast = n;
+
+		do {
+			slow = getNext(slow);
+			fast = getNext(getNext(fast));
+		} while (slow != fast);
+
+		return slow == 1;
+	}
+	
+	private static int getNext(int n) {
+		int totalSum = 0;
+		while (n > 0) {
+			int digit = n % 10;
+			totalSum += digit * digit;
+			n /= 10;
+		}
+		return totalSum;
+	}
 	public static void main(String[] args) {
-		
+		int number = 19; // You can change this number to test other cases
+	    System.out.println(number + " is a happy number: " + isHappyNumber(number));
 	}
 }

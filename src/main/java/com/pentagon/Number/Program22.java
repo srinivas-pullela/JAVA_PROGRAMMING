@@ -3,37 +3,35 @@ package com.pentagon.Number;
 
 public class Program22 {
 
-	public static int countDigits(int num) {
-		int count=0;
-		while(num!=0) {
-			count++;
-			num=num/10;
+	public static boolean isStrongNumber(int num) {
+		int originalNum = num;
+		int sum = 0;
+		
+		while (num > 0) {
+			int digit = num % 10;
+			sum += factorial(digit);
+			num /= 10;
 		}
-		return count;
+		
+		return sum == originalNum;
 	}
 	
-	public static void strongNumber(int n) {
-		int n1=n;
-		int count=countDigits(n);
-		int res=1;
-		int sum=0;
-		while(n!=0) {
-			int ld=n%10;
-			for(int i=1;i<=count;i++) {
-				res*=ld;
-			}
-			System.out.println(res);
-			sum+=res;
-			n/=10;
+	public static int factorial(int n) {
+		if (n == 0 || n == 1) {
+			return 1;
 		}
-		if(sum==n1) {
-			System.out.println("Strong number");
-		}else {
-			System.out.println("Not a strong number");
+		int fact = 1;
+		for (int i = 2; i <= n; i++) {
+			fact *= i;
 		}
+		return fact;
 	}
-	
 	public static void main(String[] args) {
-		strongNumber(145);
+		int number = 145;
+		if (isStrongNumber(number)) {
+			System.out.println(number + " is a strong/factorian/krishnamurty number.");
+		} else {
+			System.out.println(number + " is not a strong/factorian/krishnamurty number.");
+		}
 	}
 }

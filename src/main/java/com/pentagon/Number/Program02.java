@@ -1,3 +1,4 @@
+//Arithmetic Operations using static method
 package com.pentagon.Number;
 
 import java.util.Scanner;

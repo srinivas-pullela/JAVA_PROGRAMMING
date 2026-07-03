@@ -3,19 +3,26 @@ package com.pentagon.Number;
 
 public class Program25 {
 	
-	public static boolean isIncreasing(int n) {
-		int max=10;
-		while(n!=0) {
-			int ld=n%10;
-			if(max>ld) {
-				max=ld;
+	public static boolean isStrictlyIncreasing(int num) {
+		int lastDigit = num % 10;
+		num /= 10;
+		
+		while (num > 0) {
+			int currentDigit = num % 10;
+			if (currentDigit >= lastDigit) {
+				return false; // Not strictly increasing
 			}
-			else return false;
-			n=n/10;
+			lastDigit = currentDigit;
+			num /= 10;
 		}
-		return true;
+		return true; // Strictly increasing
 	}
 	public static void main(String[] args) {
-		System.out.println(isIncreasing(123));
+		int number = 12345;
+		if (isStrictlyIncreasing(number)) {
+			System.out.println(number + " is a strictly increasing number.");
+		} else {
+			System.out.println(number + " is not a strictly increasing number.");
+		}
 	}
 }

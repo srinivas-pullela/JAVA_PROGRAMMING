@@ -3,25 +3,19 @@ package com.pentagon.Number;
 
 public class Program27 {
 
-	public static void isAutomorphicNum(int n) {
-		int sqr=n*n;
-		int count=0;
+	public static void isAutomorphicNum(int num) {
+		int square = num * num;
+		String numStr = Integer.toString(num);
+		String squareStr = Integer.toString(square);
 		
-		while(n!=0) {
-			int ld=n%10;
-			count++;
-			n=n/10;
-		}
-		
-		int last = sqr%100;
-		System.out.println(last);
-		if(sqr==0) {
-			System.out.println("Automorphic number");
-		}else {
-			System.out.println("Is not automorphic number");
+		if (squareStr.endsWith(numStr)) {
+			System.out.println(num + " is an Automorphic number.");
+		} else {
+			System.out.println(num + " is not an Automorphic number.");
 		}
 	}
 	public static void main(String[] args) {
-		isAutomorphicNum(25);
+		int number = 25;
+		isAutomorphicNum(number);
 	}
 }

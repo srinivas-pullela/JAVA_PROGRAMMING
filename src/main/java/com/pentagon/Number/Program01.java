@@ -1,3 +1,4 @@
+//Print Natural numbers
 package com.pentagon.Number;
 
 import java.util.Scanner;

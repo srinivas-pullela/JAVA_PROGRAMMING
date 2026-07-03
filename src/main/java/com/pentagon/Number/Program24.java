@@ -3,22 +3,25 @@ package com.pentagon.Number;
 
 public class Program24 {
 
-	public static void sumOfDigits(int num) {
-		int n=num;
-		int sum=0;
-		while(num!=0) {
-			int ld=num%10;
-			sum+=ld;
-			num=num/10;
+	//logic here is example: 6 is a perfect number because its divisors are 1, 2, and 3, and their sum is 6 (1 + 2 + 3 = 6). 
+	//Similarly, 28 is a perfect number because its divisors are 1, 2, 4, 7, and 14, and their sum is 28 (1 + 2 + 4 + 7 + 14 = 28).
+	public static boolean isPerfectNumber(int num) {
+		int sum = 0;
+		for (int i = 1; i < num; i++) {
+			if (num % i == 0) {
+				sum += i;
+			}
 		}
-		if(sum==n) {
-			System.out.println("Perfect number");
-		}else {
-			System.out.println("Not a perfect number");
-		}
+		return sum == num;
 	}
 	
 	public static void main(String[] args) {
-		sumOfDigits(23579);
+	
+		int number = 28;
+		if (isPerfectNumber(number)) {
+			System.out.println(number + " is a perfect number.");
+		} else {
+			System.out.println(number + " is not a perfect number.");
+		}
 	}
 }

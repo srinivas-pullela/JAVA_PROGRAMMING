@@ -3,27 +3,33 @@ package com.pentagon.Number;
 
 public class Program33 {
 
-	public static boolean isBouncy(int n) {
-		int ld=n%10;
-		n/=10;
-		boolean isIncreasing = false;
-		boolean isDecreasing = false;
-		while(n!=0) {
-			int currentLast = n%10;
-			if(currentLast<ld) {
-				isIncreasing = true;
-			}else {
-				isDecreasing = true;
+	public static boolean isBouncy(int num) {
+		boolean increasing = false;
+		boolean decreasing = false;
+		int lastDigit = num % 10;
+		num /= 10;
+		
+		while (num > 0) {
+			int currentDigit = num % 10;
+			if (currentDigit < lastDigit) {
+				increasing = true;
+			} else if (currentDigit > lastDigit) {
+				decreasing = true;
 			}
-			if(isIncreasing && isDecreasing) {
-				return true;
+			if (increasing && decreasing) {
+				return true; // It's a bouncy number
 			}
-			ld=currentLast;
-			n/=10;
+			lastDigit = currentDigit;
+			num /= 10;
 		}
-		return false;
+		return false; // Not a bouncy number
 	}
 	public static void main(String[] args) {
-		
+		int number = 12345;
+		if (isBouncy(number)) {
+			System.out.println(number + " is a bouncy number.");
+		} else {
+			System.out.println(number + " is not a bouncy number.");
+		}
 	}
 }
