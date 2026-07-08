@@ -3,6 +3,7 @@ package com.pentagon.Arrays;
 
 public class Program44 {
 
+	//for example, if the input array is {1, 2, 3, 4, 5, 6, 7, 8}, then the output should be {2, 4, 6, 8, 1, 3, 5, 7}
 	public static void segregateEvenAndOdd(int arr[]) {
 		int left = 0;
 		int right = arr.length - 1;
