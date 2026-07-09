@@ -315,11 +315,11 @@ Feel free to use, modify, and share it for educational purposes.
 
 # 👨‍💻 Author
 
-**Name:** *Your Name*
+**Name:** *Srinivas*
 
-**LinkedIn:** https://linkedin.com/in/your-profile
+**LinkedIn:** https://www.linkedin.com/in/srinivas--p/
 
-**GitHub:** https://github.com/your-username
+**GitHub:** https://github.com/srinivas-pullela/
 
 ---
 
