@@ -1,7 +1,7 @@
 //Count spaces in a string for example sr in iv as
 package com.pentagon.Strings;
 
-public class Program3 {
+public class Program03 {
 
 	public static void countSpaces(String str) {
 		int count=0;

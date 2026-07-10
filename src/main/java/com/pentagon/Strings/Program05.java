@@ -1,7 +1,7 @@
 //WAP of container
 package com.pentagon.Strings;
 
-public class Program5 {
+public class Program05 {
 
 	public static boolean contains(String str,char ch) {
 		for(int i=0;i<str.length();i++) {

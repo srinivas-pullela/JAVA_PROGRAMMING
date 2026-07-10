@@ -1,7 +1,7 @@
 //Replace a space with a given character
 package com.pentagon.Strings;
 
-public class Program6 {
+public class Program06 {
 	public static void replaceSpace(String str,char ch) {
 		String res="";
 		for(int i=0;i<str.length();i++) {

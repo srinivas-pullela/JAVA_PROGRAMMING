@@ -3,7 +3,7 @@ package com.pentagon.Strings;
 
 import java.util.Scanner;
 
-public class Program1 {
+public class Program01 {
 	
 	//for exaample, a#CDe ---> A#CDE
 	public static String toUpperCase(String str) {

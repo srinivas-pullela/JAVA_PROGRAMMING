@@ -1,7 +1,7 @@
 //Write a Java program to remove spaces from a string
 package com.pentagon.Strings;
 
-public class Program7 {
+public class Program07 {
 
 	public static void removeSpace(String str) {
 		String res = "";

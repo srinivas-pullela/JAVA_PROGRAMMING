@@ -1,7 +1,7 @@
 //Write a program to remove starting and ending spaces from a given not middle
 package com.pentagon.Strings;
 
-public class Program9 {
+public class Program09 {
 	
 	//"  Abc   Xyz  "->"Abc Xyx"
 	//Using trim method

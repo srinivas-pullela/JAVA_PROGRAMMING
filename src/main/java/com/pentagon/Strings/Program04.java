@@ -1,7 +1,7 @@
 //print Even indices characters and odd indices characters
 package com.pentagon.Strings;
 
-public class Program4 {
+public class Program04 {
 	
 	public static void evenOddChar(String str) {
 		String res="";

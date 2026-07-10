@@ -1,7 +1,7 @@
 //Write a Java Program to remove the first and last character from a string
 package com.pentagon.Strings;
 
-public class Program8 {
+public class Program08 {
 
 	// Test case1: null
 	// Test case2: first character space

@@ -3,7 +3,7 @@ package com.pentagon.Strings;
 
 import java.util.Scanner;
 
-public class Program2 {
+public class Program02 {
 
 	// In how many we can solve this problem? and which is the best way to solve
 	// this problem?
